@@ -5,4 +5,3 @@
   after successfull running it will ask for mp3 music location from where it can fetch all the music
   
 . instruction is provided menu->instruction
-. for excessing the gesture.. make sure you have a good quality camera

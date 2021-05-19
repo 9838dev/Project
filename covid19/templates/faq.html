@@ -1,0 +1,360 @@
+<html lang="en">
+<head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title>FAQ's</title>
+    <style>
+        .questions {
+            right: 0;
+            /* margin: 0 auto; */
+            padding: 4rem;
+            width: 100%;
+            margin-right: 0;
+        }
+
+          h3 {
+            font-size: 1.75rem;
+            color: #373d51;
+            padding: 1.3rem;
+            margin: 0;
+          }
+          @import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+                 .accordion a {
+            position: relative;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 4rem 2rem 1rem;
+            color: #072d50;
+            font-size: 1.50rem;
+            font-weight: 400;
+            border-bottom: 1px solid #11861e;
+        }
+
+          .accordion a:hover,
+          .accordion a:hover::after {
+            cursor: pointer;
+            color: #03b5d2;
+          }
+
+          .accordion a:hover::after {
+            border: 1px solid #03b5d2;
+          }
+
+          .accordion a.active {
+            color: #03b5d2;
+            border-bottom: 1px solid #03b5d2;
+          }
+
+         .accordion a::after {
+                font-family: 'Icons8';
+                content: '+';
+                position: absolute;
+                float: right;
+                right: 0rem;
+                font-size: 2rem;
+                color: #7288a2;
+                font-weight: bolder;
+                /* padding: 5px; */
+                width: 30px;
+                height: 30px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                border: 1px solid #7288a2;
+                text-align: center;
+            }
+
+          .accordion a.active::after {
+            font-family: 'Ionicons';
+            content: '--';
+            color: #03b5d2;
+            border: 1px solid #03b5d2;
+          }
+
+          .accordion .content {
+            opacity: 0;
+            padding: 0 1rem;
+            max-height: 0;
+            border-bottom: 1px solid #e5e5e5;
+            border-bottom-style:dashed;
+            overflow: hidden;
+            clear: both;
+            -webkit-transition: all 0.2s ease 0.15s;
+            -o-transition: all 0.2s ease 0.15s;
+            transition: all 0.2s ease 0.15s;
+          }
+
+          .accordion .content p {
+            font-size: 1.5rem;
+            font-weight: 300;
+          }
+
+          .accordion .content.active {
+            opacity: 1;
+            padding: 1rem;
+            max-height: 100%;
+            -webkit-transition: all 0.35s ease 0.15s;
+            -o-transition: all 0.35s ease 0.15s;
+            transition: all 0.35s ease 0.15s;
+            border-bottom: 1px solid #0ea486;
+          }
+    </style>
+</head>
+<BODY>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-head">
+                    <a class="navbar-brand" href="#">FAQ's</a>
+                  <a href="{%url "hello" %}"> <button style="float: right; margin-top:15px;">Go Back</button></a> 
+                </div>
+
+            </div>
+
+        </nav>
+
+    <div class="questions">
+
+        <h2 style="color:#1a8300">Frequently Asked Questions</h2>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <a> What is corona virus? </a>
+                    <div class="content">
+                        <p> Corona viruses are a large family of viruses which may cause illness
+                            in animals or humans. In humans, several coronaviruses are known
+                            to cause respiratory infections ranging from the common cold to more
+                            severe diseases such as Middle East Respiratory Syndrome (MERS)
+                            and Severe Acute Respiratory Syndrome (SARS). The most recently
+                            discovered coronavirus causes coronavirus disease COVID-19.
+                             </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a> What is COVID-19? </a>
+                    <div class="content">
+                        <p> COVID-19 is the infectious disease caused by the most recently
+                            discovered corona virus. This new virus and disease were unknown
+                            before the outbreak began in Wuhan, China, in December 2019.  </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a> What are the symptoms of COVID-19? </a>
+                    <div class="content">
+                        <p> The most common symptoms of COVID-19 are fever, tiredness, and
+                            dry cough. Some patients may have aches and pains, nasal
+                            congestion, runny nose, sore throat or diarrhea. These symptoms are
+                            usually mild and begin gradually. Some people become infected but
+                            don’t develop any symptoms and don't feel unwell. Most people
+                            (about 80%) recover from the disease without needing special
+                            treatment. Around 1 out of every 6 people who gets COVID-19
+                            becomes seriously ill and develops difficulty breathing. Older people,
+                            and those with underlying medical problems like high blood pressure,
+                            heart problems or diabetes, are more likely to develop serious illness.
+                            People with fever, cough and difficulty breathing should seek medical
+                            attention.  </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a> How does COVID-19 spread? </a>
+                    <div class="content">
+                        <p> ansPeople can catch COVID-19 from others who have the virus. The
+                        disease can spread from person to person through small droplets from
+                        the nose or mouth which are spread when a person with COVID-19
+                        coughs or exhales. These droplets land on objects and surfaces
+                        around the person. Other people then catch COVID-19 by touching
+                        these objects or surfaces, then touching their eyes, nose or mouth.
+                        People can also catch COVID-19 if they breathe in droplets from a
+                        person with COVID-19 who coughs out or exhales droplets. This is
+                        why it is important to stay more than 1 meter (3 feet) away from a
+                        person who is sick.  </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a> Can the virus that causes COVID-19 be transmitted through the air?  </a>
+                    <div class="content">
+                        <p> Studies to date suggest that the virus that causes COVID-19 is mainly
+                        transmitted through contact with respiratory droplets rather than
+                        through the air. See previous answer on “How does COVID-19
+                        spread?” </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a> Can CoVID-19 be caught from a person who has no symptoms?  </a>
+                    <div class="content">
+                        <p> The main way the disease spreads is through respiratory droplets
+                            expelled by someone who is coughing. The risk of catching COVID-19
+                            from someone with no symptoms at all is very low. However, many
+                            people with COVID-19 experience only mild symptoms. This is
+                            particularly true at the early stages of the disease. It is therefore
+                            possible to catch COVID-19 from someone who has, for example, just
+                            a mild cough and does not feel ill.  </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a> Can I catch COVID-19 from the feces of someone with the disease?  </a>
+                    <div class="content">
+                        <p> The risk of catching COVID-19 from the feces of an infected person
+                            appears to be low. While initial investigations suggest the virus may
+                            be present in feces in some cases, spread through this route is not a
+                            main feature of the outbreak. The ongoing research on the ways
+                            COVID-19 is spread and will continue to share new findings. Because
+                            this is a risk, however, it is another reason to clean hands regularly,
+                            after using the bathroom and before eating.  </p>
+                </div>
+                </div>
+                <div class="accordion-item">
+                    <a> Are antibiotics effective in preventing or treating the COVID-19? </a>
+                    <div class="content">
+                        <p> No. Antibiotics do not work against viruses, they only work on
+                            bacterial infections. COVID-19 is caused by a virus, so antibiotics do
+                            not work. Antibiotics should not be used as a means of prevention or
+                            treatment of COVID-19. They should only be used as directed by a
+                            physician to treat a bacterial infection. </p>
+                    </div>
+                </div><div class="accordion-item">
+                    <a> Is there a vaccine drug or treatment for COVID-19 </a>
+                    <div class="content">
+                        <p> Not yet. To date, there is no vaccine and no specific antiviral medicine
+                            to prevent or treat COVID-2019. However, those affected should
+                            receive care to relieve symptoms. People with serious illness should
+                            be hospitalized. </p>
+                    </div>
+                </div>
+
+
+
+                    <div class="accordion-item">
+                      <a>Who should get tested for novel coronavirus?</a>
+                      <div class="content">
+                        <p>Even if you have a fever and a severe cough, or a sore throat, you still need not get tested as of now unless you fit in two criteria. The first criteria are whether you have travelled abroad in the last 14 days, especially to a country where an outbreak of novel coronavirus is happening or you have come in close contact with a laboratory-confirmed case of Covid-19..</p>
+                      </div>
+                     </div>
+                    <div class="accordion-item">
+                      <a>How long does it take for symptoms to appear?</a>
+                      <div class="content">
+                          <p>This is what we call the incubation period. It usually takes between 2-7 days but it varies up to 14 days. Rarely, it has been reported that sometimes it can take even longer but in most patients, within 5-7 days symptoms will start to appear in the form of fever, cough and sore throat.</p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <a>Is it safe to visit hospitals with Covid-19 patients?</a>
+                      <div class="content">
+                          <p> It's safe to visit hospitals because patients infected with novel coronavirus are being kept in isolation wards. However, one must not visit the hospital at this time unless it is absolutely necessary. Routine healthcare visits should be postponed.</p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <a>Will summer or humidity kill the novel coronavirus?</a>
+                      <div class="content">
+                        <p>My feeling is that it would not. It might decrease the transmissibility of the virus. We still have cases in tropical countries like Singapore and Thailand. A large number of us spend a lot of time inside the house or shopping malls, areas which are air-conditioned. And here the temperature is low and there is crowding. If one person has the infection and he is coughing, the person can spread the virus.</p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <a>Can a person cured of novel coronavirus get it again?</a>
+                      <div class="content">
+                          <p>his is a viral infection unlike swine flu or H1N1 but once you are exposed to the infection, there is a chance of getting it again. Once you get the infection, there are antibodies produced in the body which protect you against subsequent infection or make it less severe. If you get exposed to novel coronavirus, later on, it will be a mild infection.</p>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> Do yoga and pranayam build immunity against Covid-19? </a>
+                        <div class="content">
+                            <p> There is no evidence to support that yoga or pranayam or ayurvedic or homoeopathic drugs are effective as far as treatment of Covid-19 is concerned. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> Will sipping hot water kill the virus? </a>
+                        <div class="content">
+                            <p> Neither sipping hot water nor consumption of alcohol will kill the virus. Alcohol-based sanitisers kill the virus on your hands but once in your throat, the virus infects the cells and alcohol cannot help there. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> Are hand sanitisers better than soap? </a>
+                        <div class="content">
+                            <p>  If you can use soap with water, it is a better thing. One uses soap more thoroughly and it helps clear the virus in between the fingers and under the nails. If you do not have soap, use hand sanitiser but clean your hands thoroughly and regularly. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> How long does the virus survive on surfaces? </a>
+                        <div class="content">
+                            <p> Depends on the surface. Some data suggests that it can survive on cardboard for a few hours or other surfaces which are metal-based and especially if the temperature is low and the humidity is high, it may even survive 6-8 hours. That is why it is important to regularly wash hours. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> What precautions should pregnant women take? </a>
+                        <div class="content">
+                            <p>  There is no data suggesting that like swine flu, pregnant woman are at a higher risk. Pregnant women should avoid crowded areas. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> Will Covid-19 outbreak worsen before it ends? </a>
+                        <div class="content">
+                            <p> Global trends suggest that the infection is still on the rise and has not reached a plateau. The number of cases is rising all over the world. There will be rise over the next few weeks until that plateau is reached and then we will see a downward trend as can be seen in China and South Korea. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> What type of masks is preferred? </a>
+                        <div class="content">
+                            <p> The N-95 and triple-aid masks are for healthcare workers operating in hospitals and infected areas. The self-made face cover does not have a very strong filter but it helps in reducing the transmission. If everyone covers their face with self-made masks, including people who have a very mild coronavirus infection, the droplets of water will not jump from host to host. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> At what point should one get tested for Covid-19? </a>
+                        <div class="content">
+                            <p>  The symptoms of coronavirus are very non-specific. If I have a little bit of fever and get tested, it would be a waste of resources. It is important to get people with severe symptoms and healthcare workers tested because we do not want them to contract the infection. The elderly and those with co-morbid conditions are at a higher risk, diagnosing them and treating them is important. </p>
+                        </div>
+                    </div>
+                        <div class="accordion-item">
+                        <a> How long does it take to recover from Covid-19? </a>
+                        <div class="content">
+                            <p>  It depends on what type of illness you have. According to the breakup that we have, 80 per cent of individuals will have a mild or asymptomatic disease and they will recover on their own within 5-7 days. You have another 15 per cent who have a border disease, may need hospitalisation and they will recover within 10-15 days. The remaining 5 per cent who have a severe disease will be in the ICU, may need ventilator support and they may take about three weeks to recover. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> Does hydroxychloroquine work? </a>
+                        <div class="content">
+                            <p>  We had initially one study from France. More recently, another study has come up from China which suggests that giving hydroxychloroquine to Covid-19 patients can decrease the viral load, decreasing the days of admission in hospital required. So, there is some evidence although it is limited. We need more data to establish a clear link. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a> How safe is it to visit a hospital? </a>
+                        <div class="content">
+                            <p>  It is not completely safe to visit a hospital, more so if you are above the age of 60 or suffering from comorbidities. However, if you have to visit the hospital for screening, dialysis etc, inform your healthcare official beforehand and make sure you wear a mask and maintain safe distance from others. </p>
+                        </div>
+                    </div>
+
+            </div>
+
+
+
+
+            </div>
+
+
+    <script>
+        const items = document.querySelectorAll(".accordion a");
+
+        function toggleAccordion() {
+          this.classList.toggle("active");
+          this.nextElementSibling.classList.toggle("active");
+        }
+
+        items.forEach((item) => item.addEventListener("click", toggleAccordion));
+
+    </script>
+
+</body>
+</html>

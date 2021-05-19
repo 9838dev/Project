@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!--jQuery library-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!--Latest compiled and minified JavaScript-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID19 Home Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    .navbar-inverse .navbar-brand {
+      color: #fffbfb;
+
+    }
+
+    body {
+
+      --c: rgba(0, 0, 0, 0.7);
+      --t: transparent;
+      background-size: cover;
+      margin: -10px;
+
+
+    }
+
+    body {
+      margin-top: 70px;
+      background: floralwhite;
+
+    }
+
+
+    .navbar-inverse {
+      background-color: #020248;
+      border-color: #080808;
+    }
+
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container>.navbar-header {
+      margin-right: -15px;
+      margin-left: -15px;
+      background: #020248;
+    }
+
+    textarea.form-control {
+      height: 30px;
+    }
+
+    textarea::-webkit-scrollbar {
+      width: 12px;
+      background-color: #F5F5F5;
+    }
+
+    textarea::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+      background-color: #4285F4;
+    }
+
+    .container-1 {
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+      background: #08122c;
+      ;
+      margin-top: 20px;
+      box-shadow: 3px 2px 1px black;
+      padding: 5%;
+      padding-top: 0%;
+      color: white;
+      border: 1px solid #06034d;
+    }
+
+    .container-3 {
+      border: 1px solid #664b4b;
+      padding: 2%;
+      padding-top: 5px;
+      background: #08122c;
+      ;
+      margin-top: 10px;
+      box-shadow: inset -4px -4px 7px #00010b;
+    }
+
+    .container-2 {
+      border: 1px solid black;
+      padding: 3%;
+      background: #3b0000;
+      box-shadow: -5px 0px 1px #020f3b;
+      margin-top: 5px;
+      padding-top: 0;
+      color: white;
+      box-shadow: inset -4px -4px 7px #00010b;
+    }
+
+    .container-5 {
+      border: 1px solid black;
+      padding: 3%;
+      background: #08122c;
+      height: 300px;
+      padding-top: 0%;
+      color: white;
+      box-shadow: inset -4px -4px 7px #00010b;
+    }
+
+    .container-4 {
+      border: 1px solid black;
+      padding: 3%;
+      background: #08122c;
+      box-shadow: -5px 0px 1px #020f3b;
+      margin-top: 10px;
+      padding-top: 0%;
+      color: white;
+      box-shadow: inset -9px -6px 7px #00010b;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      position: relative;
+      margin: auto;
+
+    }
+
+    .mySlides {
+
+      border: 1px solid black;
+      padding: 10px;
+      color: cornsilk;
+      width: 100%;
+      height: 184px;
+      box-shadow: inset 14px -10px 20px 5px rgba(1, 4, 19, 0.5);
+      background-image: url("{%static "css/img/covid.jpg" %}");
+      background-size: cover;
+      background-repeat: none;
+
+    }
+
+    .fade {
+      box-shadow: outset 14px -10px 20px 5px rgba(1, 4, 19, 0.5);
+
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 2s;
+      margin-bottom: -13px;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {
+        font-size: 11px
+      }
+    }
+
+    .contain {
+      margin: 5%;
+    }
+
+    .nearstore {
+      border: 1px solid black;
+      padding: 20px;
+      padding-top: 5px;
+      margin-top: 21px;
+      margin-bottom: 5px;
+      color: white;
+      background: #08122c;
+      box-shadow: inset -9px -6px 7px #00010b;
+    }
+
+    .newsfeed {
+      font-size: 17px;
+      HEIGHT: 130PX;
+    }
+
+    .comment-box {
+      margin: 10px;
+      margin-left: 0%;
+      box-shadow: -5px 0px 0px black;
+      border-bottom: 1px solid whitesmoke;
+      padding-bottom: 4px;
+    }
+
+    button {
+      color: black;
+      background: khaki;
+    }
+
+    button,
+    html input[type=button],
+    input[type=reset],
+    input[type=submit] {
+      -webkit-appearance: button;
+      cursor: pointer;
+      color: #efebeb;
+      background: #0c1f57;
+    }
+
+    .viewmore {
+      margin-top: 5px;
+    }
+
+    h3 {
+      margin-top: 2px;
+      margin-bottom: 5px;
+      color: #f1bfbf;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 10px;
+      color: #fff;
+      border: 2px solid #06D85F;
+      border-radius: 20px/50px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+
+    .button:hover {
+      background: #06D85F;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      width: 30%;
+      position: relative;
+      transition: all 5s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .popup .close:hover {
+      color: #06D85F;
+    }
+
+    .popup .content {
+      max-height: 30%;
+      overflow: auto;
+    }
+    .feedback
+  {
+    margin: auto;
+    padding: 15px;
+    border: 2px solid black;
+  }
+  .feedback textarea{
+    height: 90px;
+    width: 80%;
+    margin: 10px;
+      margin-left: 0%;
+      box-shadow: -2px 2px 4px  black;
+      border: 1.5px solid black;
+      border-bottom: 1px solid whitesmoke;
+      padding-bottom: 4px;
+  }
+
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+
+      .popup {
+        width: 90%;
+        overflow: auto;
+        overflow-y: scroll !important;
+        max-height: 80%;
+      }
+    }
+
+    .query,
+    .help {
+      width: 82%
+    }
+
+    .helpshow {
+      height: 150px;
+    }
+
+    .help {
+
+      margin-bottom: 3px;
+    }
+
+    .post,
+    .helpbtn{
+      float: right;
+      margin-top: -30px;
+      margin-right: 4px;
+    }
+
+
+
+    #kryesore {
+      overflow-y: scroll;
+    }
+    #page-content {
+flex: 1 0 auto;
+
+}
+
+#sticky-footer {
+height: 40px;
+line-height: 30px;
+flex-shrink: none;
+background: black;
+color: white;
+font-family: 'Times New Roman', Times, serif;
+}
+  </style>
+</head>
+
+<BODY>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">COVID - 19 </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a style="color:yellow;" class="active" href=" ">Home</a></li>
+          <li><a style="color:yellow;" href="#symptoms">Symptoms of Covid-19</a></li>
+          <li><a style="color:yellow;" href="#precautions">precautional measures</a></li>
+          <li><a style="color:yellow;" href="faq">Frequently asked question</a></li>
+          <li><a style="color:yellow;" href="#">Complaints</a></li>
+          <li><a style="color:yellow;" href="news">News</a></li>
+          <li><a style="color:yellow;" href="#" id="btn1">Feedback</a></li>
+          <li><a style="color:yellow;" href="{%url "hello" %}?action=logout">LogOut</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="contain">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+
+        <center>
+          <h1>India</h1>
+          <h4 id="india_totalcase">Total Cases: </h4>
+          <h4 id="india_totalrecover">Total Recovered: </h4>
+          <h4 id="india_totaldeath">Total Deaths: </h4>
+        </center>
+      </div>
+
+      <div class="mySlides fade">
+        <center>
+          <h1>{{key3}}</h1>
+          <h4 id="state_totalcase">Total Cases: </h4>
+          <h4 id="state_totalrecover">Total Recovered: </h4>
+          <h4 id="state_totaldeath">Total Deaths: </h4>
+        </center>
+      </div>
+
+      <div class="mySlides fade">
+        <center>
+          <h1>Stay home,Stay Safe</h1>
+        </center>
+      </div>
+      <div class="mySlides fade">
+        <center>
+          <h1>Info</h1>
+          <h4>
+            Nearby stores:<br>
+            Milkshop: sanchi parlour<br>
+            Vegetable shop: <br>
+            Medical Store: <br>
+          </h4>
+        </center>
+      </div>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <div id="feedback" class="feedback" type="textarea" style="display:none">
+      <form method="post">
+      {%csrf_token%}
+      <textarea name="feedback" rows="8" cols="5" placeholder="Enter your feedback"></textarea>
+      <center>
+        <button>POST</button>
+      </center>
+    </form>
+    </div>
+
+    <div class="container-2">
+      <div class="newsfeed" type="textarea">
+        <h3><b>News Update :</b></h3>
+        <marquee behavior="scroll" direction="up" height="100px; scrollamount=1">
+          <div id="News" class="news"> </div>
+        </marquee>
+
+      </div>
+      <div>
+          <center>
+          <a href="{%url "news" %}"><button class="viewmore" name="More">View More</button></a>
+        </center>
+
+      </div>
+
+    </div>
+    <div class="container-3">
+      <form  method="post">
+        {%csrf_token%}
+      <input name="queries" class="form-control query" rows="5" placeholder="Type your query here...">
+      <button type="submit" class="post" >Post</button>
+      </form>
+    </div>
+
+
+    <div class="container-5" id="kryesore" style="overflow-y: scroll;">
+      {%for i in key%}
+        {%if i.Email in key5%}
+          <div class="raise">
+            <h5><strong>{{i.Query_box}}--by-{{i.Email}}</strong></h5>
+          </div>
+          <form  method="post">
+            {%csrf_token%}
+            {% for j in key1%}
+              {%if j.Query_Id == i.id %}
+                <div class="comment">---{{j.Comment}}</div>
+              {%endif%}
+            {%endfor%}
+            <div class="comment-box">
+              <div id="{{i.id}}" style="display: none;" class="form-group">
+                <input name="answer" class="form-control rounded-0" class="comment" rows="5" placeholder="Comment here..">
+                <button type="submit" name="id" value="{{i.id}}">Post</button>
+              </div>
+              <div class="raisehand">
+                <button  name="raise" value="{{i.id}}">Raise this issue,{{i.Raise}}</button>
+                <input type="button" id="1"
+                  onclick="document.getElementById('{{i.id}}').style.display='block',document.getElementById('1').style.display='none'"
+                  value="Comment">
+                  {%if i.Email == key4%}
+                    <button  name="delete" value="{{i.id}}"><span class="glyphicon glyphicon-trash"></button></span>
+                  {%endif%}
+              </div>
+              <div class="form-group">
+
+              </div>
+            </div>
+          </form>
+        {%endif%}
+      {%endfor%}
+    </div>
+
+    <div class="container-4">
+      <h3> Want to help ?<br></h3>
+        <div class="helpshow" id="kryesore" style="overflow-y: scroll;">
+          {%for i in key2%}
+            {%if i.Email in key5%}
+              {{i.Trade}} --by {{i.Email}}<br>
+            {%endif%}
+          {%endfor%}
+        </div>
+      <form method="post">
+        {%csrf_token%}
+      <input name="trade" class="form-control help" rows="5" placeholder="Your small help is also valuable">
+      <button class="helpbtn">Post</button>
+      </form>
+    </div>
+  </div>
+  <div id="symptoms" class="overlay">
+    <div class="popup">
+      <h3>Symptoms</h3>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness
+        and recover without hospitalization.
+        <br>
+        Most common symptoms:
+        <ul>
+          <li>fever.</li>
+          <li>dry cough.</li>
+          <li> tiredness.</li>
+        </ul>
+        Less common symptoms:
+
+        <ul>
+          <li>aches and pains.</li>
+          <li> sore throat.</li>
+          <li> diarrhoea.</li>
+          <li>conjunctivitis.</li>
+          <li>headache.</li>
+          <li>loss of taste or smell.</li>
+          <li>a rash on skin, or discolouration of fingers or toes.</li>
+        </ul>
+        Serious symptoms:
+        <ul>
+          <li> difficulty breathing or shortness of breath.</li>
+          <li>chest pain or pressure.</li>
+          <li>loss of speech or movement.</li>
+        </ul><br>
+        <p> Seek immediate medical attention if you have serious symptoms. </p>
+      </div>
+    </div>
+  </div>
+  <div id="precautions" class="overlay">
+    <div class="popup">
+      <h3>Precautions</h3>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        To prevent the spread of COVID-19:
+        <ul>
+          <li>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</li>
+          <li>Maintain a safe distance from anyone who is coughing or sneezing.</li>
+          <li>Don’t touch your eyes, nose or mouth.</li>
+          <li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li>
+          <li>Stay home if you feel unwell.</li>
+          <li>If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.</li>
+          <li>Follow the directions of your local health authority.</li>
+          <li>Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively,
+            therefore protecting you and others.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    var state="{{key3}}"
+    showSlides();
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+
+    }
+
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        $("#feedback").toggle();
+      });
+    });
+
+    $.ajax({
+      url: "http://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=dab3cd63b1a045d29299c60e0bdb5441",
+      type: "GET",
+      datatype: "JSON",
+      success: function (news) {
+        $("#News").append("<tr>" + "<td>" + news.articles[0].title + "</td>" + "</tr>")
+        $("#News").append("<tr>" + "<td>" + news.articles[1].title + "</td>" + "</tr>")
+      }
+    });
+    $.ajax({
+      url: "https://api.covid19india.org/data.json",
+      type: "GET",
+      datatype: "JSON",
+      success: function (cases) {
+        a = cases.cases_time_series.length
+        console.log(cases)
+
+        $('#india_totalcase').append(cases.cases_time_series[a - 1].totalconfirmed)
+        $('#india_totaldeath').append(cases.cases_time_series[a - 1].totaldeceased)
+        $('#india_totalrecover').append(cases.cases_time_series[a - 1].totalrecovered)
+
+        for(var i=1;i<38;i++){
+          if(cases.statewise[i].state == state){
+            console.log(cases.statewise[i])
+            console.log("hello")
+            $("#state_totalcase").append(cases.statewise[i].confirmed)
+            $("#state_totalrecover").append(cases.statewise[i].recovered)
+            $("#state_totaldeath").append(cases.statewise[i].deaths)
+          }
+        }
+
+      }
+    });
+
+  </script>
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+  <div class="container text-center">
+  <small>An Initiative By The Ace's</small>
+  </div>
+  </footer>
+</body>
+
+</html>

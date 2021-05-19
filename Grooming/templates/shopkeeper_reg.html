@@ -1,0 +1,105 @@
+{%load static%}
+<html>
+    <head>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shop register</title>
+        <link href="{% static "css/shop_reg.css" %}" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                     <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="{% static "css/img/logo.png" %}" width="250" height="55">
+                </div>
+               <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{%url "user_login"%}"><span class="glyphicon glyphicon-home"></span>Home </a></li>
+                        <li><a href="{%url "shop_login"%}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                         <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>About us</a></li>
+                          <li ><a href="#"><span class="glyphicon glyphicon-briefcase"></span>Services</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </nav>
+        <br><br><br>
+         <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 myclass signup">
+                    <center><h2><b>SIGN UP</b></h2></center>
+                       <form class="box text-center " method="post">
+                         {%csrf_token%}
+                            <div class="form-group">
+                                <input  class="form-control" id="username" placeholder="Name" name="Name"  required = "true">
+                            </div>
+                            <div class="form-group" id="gender">Gender:
+                            <input type="radio" id="male" name="Gender" value="Male">
+
+                            <label for="male">Male  </label>
+                            <input type="radio" id="female" name="Gender" value="Female">
+                            <label for="female">Female  </label>
+                            <input type="radio" id="other" name="Gender" value="Other">
+                            <label for="other">Other</label>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="shopname" placeholder="ShopName" name="Shopname"  required = "true">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="services" placeholder="Services" name="Services"  required = "true">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="umail" placeholder="Email"  name="Email" required = "true">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="uphone" placeholder="Contact" name="Contact" required = "true">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="upassword" placeholder="Password" name="Password" required = "true">
+                            </div>
+                            {{key}}
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="rupassword" placeholder="Retype Password" name="Re-password" required = "true">
+                            </div>
+                            <select style="border-radius: 24px;"  id="location" name="Locality">
+        <option>Choose a location</option>
+        <option value="jahangirabad">jahangirabad</option>
+        <option value="80feet">80feet</option>
+        <option value="Neelbad">Neelbad</option>
+        <option value="kolar">kolar</option>
+        <option value="Nehru Nagar">Nehru Nagar</option>
+      </select>
+                            <br><br>
+                            <button type="submit" name="submit" class="btn btn-primary ">Submit</button>
+                             <p>Already have an account? <a href="{%url "shop_login"%}">Login</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <br>
+
+
+    </body>
+     <footer>
+            <div class="container">
+                <p align="center">
+                Copyright @ Grooming.com. All Rights Reserved | Contact Us: +91 90000 00000.
+                </p>
+            </div>
+        </footer>
+</html>

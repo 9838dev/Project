@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Test Api</title>
+</head>
+
+<body>
+    <input type="text" id="get_element">
+    <h3 id="india_total_case">Total cases in India is:::</h3>
+    <h3 id="india_total_recovered">Total recovery in India:::</h3>
+    <h3 id="india_total_death">Total death in India:::</h3>
+    <br>
+    <h3 id="particular_state_totalcase">Total cases in </h3>
+    <h3 id="particular_state_totalrecover">Total Recover in </h3>
+    <h3 id="news">News <br></h3>
+
+
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+  //console.log('{{data|safe}}')
+  /*a=myfunction({{data|safe}});
+  function myfunction(vars){
+    return vars.testdata
+  }*/
+  var a="{{key}}"
+  console.log(a)
+
+    $.ajax({
+        url: "https://api.covid19india.org/data.json",
+        type: "GET",
+        datatype: "JSON",
+        success: function (data) {
+            console.log(data)
+            for(var i=1;i<38;i++){
+              if(data.statewise[i].state == a){
+                console.log(data.statewise[i])
+                $("#particular_state_totsalcase").append(data.statewise[i].confirmed)
+                $('#particular_state_totalrecover').append(data.statewise[i].recovered)
+              }
+            }
+            //console.log(data.regionData[18].region)
+            //console.log(data.regionData[a])
+
+            /*$('#india_total_case').append(data.totalCases)
+            $('#india_total_recovered').append(data.recovered)
+            $('#india_total_death').append(data.deaths)
+            $('#particular_state_totalcase').append(data.regionData[a].region + ":::" + data.regionData[a].totalInfected)
+            $('#particular_state_totalrecover').append(data.regionData[a].region + ":::" + data.regionData[a].recovered)*/
+        }
+    });
+
+</script>

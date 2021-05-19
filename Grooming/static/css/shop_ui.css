@@ -1,0 +1,108 @@
+body {
+  /* Location of the image */
+  background :#222222;
+}
+
+.list{
+    margin-bottom: 50px;
+}
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    background-image: url(img/formng1.jpg);
+    background-size: 300px;
+    border: 2px white;
+ box-shadow: inset 2px -3px 11px 0px #555; 
+ color:white;  
+}
+
+.profile{
+   position: fixed;
+  left: 95%;
+  top: 2%;
+    transform: translate(-100%);
+    height: 45px;
+   background-image: url(img/proimg.jpg);
+   background-size: 25px;
+   height: 30px;
+   width: 30px;
+    border-radius: 50%;
+}
+
+#logo{
+    margin-left: -22px;
+}
+.shop{
+    margin-bottom:10%;;
+}
+table{
+    padding: 15px;
+}
+tr{
+    color:white;
+    border: 1px white;
+    padding-right:15px;
+}
+th{
+    padding-right: 50px;
+   color:gold;
+}
+td{
+    padding:5px;
+}
+.clk{
+    color:white;
+}
+a{
+    color:lime;
+      font-size: 15px;
+      letter-spacing: 1px;  
+}
+P{
+    color: lightcyan;
+}
+.btn{
+    float:right;
+    margin-top: -40px;
+    color:lime;
+   border-radius: 50px;
+   border-color: aqua;
+   background: none;
+ border-width: 2PX;
+}
+.btnaccept{
+    margin-right: 30%;
+}
+.btn:hover{
+    display: block;
+    width: 95px;
+    height: 40px;
+    color: aqua;
+    border-color: lime;
+   background: none;
+ border-width: 2PX;
+   
+}
+
+.btn:focus{
+    display: block;
+    width: 95px;
+    height: 40px;
+    border-color:purple;
+   background: none;
+ border-width: 2PX;
+}
+.shoplist{
+    border-radius: 25px;
+   
+}
+  footer{
+
+    background-color:  #101010; 
+    color: #9d9d9d;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    
+}

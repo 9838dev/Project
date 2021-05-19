@@ -1,0 +1,98 @@
+{%load static%}
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Services</title>
+        <link href="{% static "css/user_service_interface.css"%}" type="text/css" rel="stylesheet">
+    </head>
+
+
+
+
+
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+                  <div class="navbar-header">
+                <button type="button" class="glyphicon glyphicon-arrow-left backbtn">
+
+               </button>
+               <img src="{% static "css/img/logo.png" %}" width="250" height="55">
+
+           </div>
+
+       </div>
+
+    </nav>
+     <div class="profile-card">
+
+
+        <img class="image-container" src="{% static "css/img/bg1.jpg" %}" alt="" style="width: 100%"/>
+    <br>
+    <div class="pro-container">
+        <div class="detail-container" >
+            <div class="title">
+                <h2>{{i.Shopname}}</h2>
+              </div>
+
+            <div class="main-container">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <h4><span class="glyphicon glyphicon-user"></span> {{key.Name}}</h4>
+            </div>
+            <div>
+                <h5><span class="glyphicon glyphicon-envelope"></span> {{key.Email}}</h5>
+
+              <h5><span class="	glyphicon glyphicon-earphone"></span> {{key.Contact}}</h5>
+
+              <h5 class="glyphicon glyphicon-map-marker address"> {{key.Locality}}</h5>
+            </div>
+            <br>
+
+        </div>
+      <br />
+
+    <div class="service-container">
+        <center><h3>Services</h3></center><br>
+<table>
+ {%for i in key1%}
+  <tr>
+      <td>   <label class="container">
+              <input type="checkbox" >
+                <span class="checkmark"></span>
+              </label>
+              </td>
+              <td class="service"><b>{{i.Service}}</b></td>
+      <td class="price">{{i.Price}}</td>
+  </tr>
+  {%endfor%}
+
+  </table>
+
+        <button class="sub-btn">Request</button>
+
+        <br>
+        <br>
+        <br>
+      </div>
+      <br>
+    </div>
+    </div>
+    <footer>
+            <div class="container">
+                <p align="center">
+                Copyright @ Grooming.com .All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+  </body>
+</html>

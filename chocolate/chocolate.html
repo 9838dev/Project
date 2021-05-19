@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chocolate">
+    <meta name="author" content="Dev Maheshwari">
+    <title>Chocolate</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+    <!--                              Menu                                            -->
+    
+    <div id="menu">
+        <button id="order">Order your Chocolate</button>
+        <button id="about">About Us</button>
+        <button id="feedback">Feedback</button>
+    </div><br>
+    
+    <h1 class="h1">Fresh, HandMade Chocolates are avalaible Here</h1>
+    
+    <!--                          Images of chocolate                                 -->
+
+    <div id="choco_img">
+        <h1 class="h1">Chocolate We Already Made</h1>
+        <img src="images/choco1.jpeg" alt="">
+        <img src="images/choco2.jpeg" alt="">
+        <img src="images/choco3.jpeg" alt="">
+        <img src="images/choco4.jpeg" alt=""><br>
+        <img src="images/choco5.jpeg" alt="">
+        <img src="images/choco6.jpeg" alt="">
+        <img src="images/choco7.jpeg" alt="">
+        <img src="images/choco8.jpeg" alt=""><br>
+        <button id="more">More Images</button>
+    </div><br><br>
+
+    <!--                           Flavours                                         -->
+    <div id="flavours">
+        <h1 class="h1">TYPES OF CHOCOLATE</h1>
+        <img src="images/bar.jpg" alt="" title="Bar chocolate" class="flavour_img" onmouseover="show(this.title);">
+        <img src="images/candy.jpeg" alt="" title="Candy" class="flavour_img">
+        <img src="images/dark.jpg" alt="" title="Dark Chocolate" class="flavour_img">
+        <img src="images/peanut.jpg" alt="" title="Peanut Chocolate" class="flavour_img"><br>
+        <img src="images/sugar_free.jpg" alt="" title="suger_free Chocolate" class="flavour_img">
+        <img src="images/Peppermint-White-Hot-Chocolate.jpg" alt="" title="Peppermint-White-Hot-Chocolate" class="flavour_img">
+        <img src="images/thym.jpg" alt="" title="Thyme Chocolate" class="flavour_img">
+        <img src="images/chai.jpeg" alt="" title="Chai Chocolate" class="flavour_img"><br>
+        <h3 class="h3">And Many More Designer Chocolate are available.....</h3>
+    </div>
+
+    <!--                Placing Order            -->
+
+    <div id="Placing_Orders">
+        <form action="" method="post">
+            <h3>After successful Submission you got a mail including your order id</h3>
+            <label for="contact">Enter Your What'sapp number</label>
+            <input type="number" name="contact" id="contact" placeholder="Contact Number"><br>
+
+            <label for="mail">Enter Your Email Id</label>
+            <input type="email" name="email" id="mail" placeholder="Email Id"><br>
+
+            <label for="name">Enter Your Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Name"><br>
+
+            <label for="address">Enter Your address</label>
+            <textarea name="address" cols="30" rows="10" id="address" placeholder="Enter your address"></textarea><br>
+            <button>Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
+<script src="myscript1.js"></script>

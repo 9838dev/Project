@@ -1,0 +1,108 @@
+body{
+
+  
+   background: #222222;
+}
+
+#logo{
+    margin-left: -20px;
+}
+.profile{
+   position: fixed;
+  left: 97%;
+  top: 2%;
+    transform: translate(-100%);
+    height: 45px;
+   background-image: url(img/proimg.jpg);
+   background-size: 25px;
+   height: 30px;
+   width: 30px;
+    border-radius: 50%;
+}
+
+
+.location{
+    height: 30px;
+    background: #222222;
+    width: 80px;
+    color: white;
+       box-shadow: inset 3px -3px 3px 0px #4f4848;
+}
+.search-feild{
+        height: 30px;
+        width: 200px;
+}
+.searchbtn{
+   height: 30px;
+   width: 30px;
+}
+.form-box{
+    padding: 6px;
+   padding-top:0px;
+}
+
+.list{
+    margin-bottom: 50px;
+}
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    background-image: url(img/formng1.jpg);
+    background-size: 300px;
+    border: 2px white;
+ box-shadow: inset 2px -3px 11px 0px #555; 
+   
+}
+a{
+    color:lime;
+      font-size: 15px;
+      letter-spacing: 1px;  
+}
+a:hover,a:focus{
+    color: aqua;
+}
+P{
+    color: lightcyan;
+}
+.btn{
+    float:right;
+        width: 90px;
+    margin-top: 10px;
+    color:lime;
+   border-radius: 50px;
+   border-color: aqua;
+   background: none;
+ border-width: 2PX;
+}
+.btn:hover{
+    display: block;
+    width: 95px;
+    height: 40px;
+    color: aqua;
+    border-color: lime;
+   background: none;
+ border-width: 2PX;
+   
+}
+
+.btn:focus{
+    display: block;
+    width: 95px;
+    height: 40px;
+    border-color:purple;
+   background: none;
+ border-width: 2PX;
+}
+.shoplist{
+    border-radius: 25px;
+   
+}
+footer{
+    background-color:  #101010; 
+    color: #9d9d9d;
+    bottom: 0;
+    width: 100%;
+  
+   
+}

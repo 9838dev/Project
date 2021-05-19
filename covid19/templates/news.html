@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title>News Headlines</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            line-height: 1.42857143;
+            color: #070829;
+            background-color: #fff;
+            padding: 20px;
+            padding-left: 0;
+            margin-top: 30px;
+        }
+            li {
+                padding: 3px;
+                border-bottom: 1px solid black;
+            }
+            h3{
+                font-size: 29px;
+                padding: 10px;
+                color: brown;
+                text-shadow: chocolate;
+                text-align: center;
+                font-weight: bolder;
+            }
+        </style>
+        </head>
+<BODY>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-head">
+                    <a class="navbar-brand" href="{%url "hello" %}">Home</a>
+                </div>
+
+            </div>
+
+        </nav>
+
+    <h3>News headlines</h3>
+    <div id="More_news">
+
+    </div>
+    <script type="text/javascript">
+$.ajax({
+    url: "http://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=dab3cd63b1a045d29299c60e0bdb5441",
+    type: "GET",
+    datatype: "JSON",
+    success: function(news){
+      console.log(news)
+      $.each(news.articles,function(key,value){
+        $("#More_news").append("<ul>"+
+          "<li>" + value.title + "</li>"
+          +"</ul>")
+      });
+    }
+  });
+</script>
+</body>
+</html>

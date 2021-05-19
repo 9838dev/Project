@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+{%load static%}
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html >
+    <head>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Shop</title>
+        <link href="{% static "css/shop_ui.css" %}" type="text/css" rel="stylesheet">
+        <script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+    </head>
+       <body onload="startTime()">
+
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+
+                <div class="navbar-header">
+                     <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <img src="{% static "css/img/logo.png"%}" width="250" height="55" id="logo" >
+
+                </div>
+               <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{%url "shop_ui"%}"><span class="glyphicon glyphicon-home"></span>Home </a></li>
+                         <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> About us</a></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Services</a></li>
+                          <li><a href="{% url "shop_logout" %}?action=logout"  >LogOut</a></li>
+
+                    </ul>
+
+                </div>
+                <button type="submit" class="profile"></button>
+            </div>
+
+         </nav><br><br>
+         <br>
+
+        <div class="container shop">
+
+            <div class=" jumbotron">
+                <div class=" container-fluids">
+                 <form class="box text-center clk">
+                       <h1><div align="center" id="txt"></div>    </h1>
+                 </form>
+                    </div>
+                </div>
+            <div class="jumbotron customer">
+               <h3>Customer Requests:</h3>
+              <div style="overflow-x:auto;">
+  <table>
+    <tr class="jumbotron">
+      <th>CUSTOMER NAME</th>
+      <th>REQUIREMENT</th>
+      <th>Accept</th>
+      <th>Reject</th>
+    </tr>
+    <tr>
+      <td>Masoom</td>
+      <td>Hair cut</td>
+      <td><button class="btn-primary accept">Accept</button></td>
+      <td><button class=" btn-primary reject">Reject</button></td>
+
+    </tr>
+     <tr>
+      <td>Masoom</td>
+      <td>Hair cut</td>
+      <td><button class="btn-primary accept">Accept</button></td>
+      <td><button class=" btn-primary reject">Reject</button></td>
+
+    </tr>
+     <tr>
+      <td>Masoom</td>
+      <td>Hair cut</td>
+      <td><button class="btn-primary accept">Accept</button></td>
+      <td><button class=" btn-primary reject">Reject</button></td>
+
+    </tr>
+     <tr>
+      <td>Masoom</td>
+      <td>Hair cut</td>
+      <td><button class="btn-primary accept">Accept</button></td>
+      <td><button class=" btn-primary reject">Reject</button></td>
+
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>makeup</td>
+      <td><button class="btn-primary accept">Accept</button></td>
+      <td><button class=" btn-primary reject">Reject</button></td>
+
+    </tr>
+
+  </table>
+</div>
+            </div>
+            <div class="jumbotron Services">
+                <h3>Services</h3>
+                  <a href="{%url "shop_services"%}">
+                  <button type="submit" name="editservices" class="btn" id="b">Edit</button></a>
+                 <table>
+                     <tr  class="jumbotron">
+      <th>Service</th>
+      <th>Price</th>
+
+    </tr>
+    {%for i in key%}
+    <tr>
+      <td> {{i.Service}}</td>
+      <td>{{i.Price}}</td>
+
+    </tr>
+    {%endfor%}
+
+
+  </table>
+
+            </div>
+
+
+            </div>
+            <footer>
+                <div class="container">
+                    <p align="center">
+                    Copyright @ Grooming.com. All Rights Reserved | Contact Us: +91 90000 00000.
+                    </p>
+                </div>
+            </footer>
+</body>
+
+</html>

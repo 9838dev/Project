@@ -1,0 +1,352 @@
+
+
+body {
+  /* Location of the image */
+  background-image: url(img/bg.jpg);
+/* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+.bg{
+     background-image: url(img/bg1_1.jpg);
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+a:hover{
+     color:lightskyblue;
+    text-shadow: 0 0 3px;
+      font-size: 13px;
+      letter-spacing: 1px;
+}
+
+.li:focus{
+    color: white;
+}
+.myclass{
+    color:white;
+    background: black;
+    opacity: 80%;
+    padding-bottom: 10px;
+    
+}
+.signup{
+ background-image:url("img/formng1.jpg");
+background-size:500px;
+opacity:100%;
+box-shadow:0 0 0 1px rgba(14,41,57,0.50),0 2px 5px rgba(14,41,57,0.50),inset 0 -1px 2px rgba(14,41,57,0.15);
+border: 2px solid #3498db;
+border-top-left-radius: 60px;
+border-bottom-right-radius: 60px;
+padding-left: 15px;
+}
+.login{
+  background-image:url("img/formng1.jpg");
+background-size:500px;
+opacity:100%;
+box-shadow:0 0 0 1px rgba(14,41,57,0.50),0 2px 5px rgba(14,41,57,0.50),inset 0 -1px 2px rgba(14,41,57,0.15);
+border: 2px solid #3498db;
+border-top-left-radius: 60px;
+border-bottom-right-radius: 60px;   
+}
+
+.box input[id = "username"] ,.box input[id = "Register"],.box input[id = "shopname"] ,.box input[id = "services"] ,.box input[id="location"],
+.box input[id = "uaddress"] ,.box input[id = "uphone"] ,.box input[id = "umail"] ,.box input[id = "username"] 
+,.box input[id = "upassword"] ,.box input[id = "rupassword"], .box input[id = "email"]
+{
+    border:0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: left;
+    border: 2px solid #3498db;
+    width:230px;
+    outline: none;
+    padding-left: 5px;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.10s;}
+.box input[id = "username"]:focus ,.box input[id = "shopname"]:focus ,.box input[id = "uphone"]:focus
+ ,.box input[id = "umail"]:focus ,.box input[id = "services"]:focus ,.box input[id = "upassword"]:focus 
+ ,.box input[id = "rupassword"]:focus ,.box input[id = "email"]:focus
+{
+    width: 250px;
+    border-color: lime;
+    color: white;
+    
+}
+
+#gender{
+    padding-left: 23px;
+  
+}
+#location{
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 230px;
+  border: 2px solid #3498db;
+}
+.box0-select[id = "location"]:focus{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px lime;
+    padding: 14px 10px;
+    width: 240px;
+    outline: none;
+    
+    color: rgb(2, 2, 2);
+    border-radius: 24px;
+    transition: 0.10s;
+}
+.btn{
+     background:black;
+    color: white;
+border: 2px solid lime ;
+border-radius: 10px;
+    margin-bottom: 15px;
+}
+.btn:hover{
+        color: black;
+        border: 2px solid lime;
+        background: lime;
+    }
+@media screen and (min-width: 240px) {
+ .login {
+  font-family: MonotypeCoursive ;
+  width: 50%;
+  margin-bottom: 70%;
+  }
+   .btn{
+      margin-bottom: 60px;
+  }
+  .box input[id = "username"] ,.box input[id = "Register"],.box input[id = "shopname"] ,.box input[id = "services"] ,.box input[id="location"],
+.box input[id = "uaddress"] ,.box input[id = "uphone"] ,.box input[id = "umail"] ,.box input[id = "username"] 
+,.box input[id = "upassword"] ,.box input[id = "rupassword"], .box input[id = "email"]
+{
+    width:160px;
+}
+   .signup {
+ width:200px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  }
+  #location{
+      width: 160px;
+  }
+  .groom{
+      font-family: Edwardian Script ITC;
+          font-size: 20px;
+          padding-left: 1px;
+  }
+}
+@media screen and (min-width: 320px) {
+ .login {
+  font-family: MonotypeCoursive ;  
+  margin-left: 10%;
+   margin-bottom: 70%;
+  width: 85%;
+  padding:5px;
+  }
+    .box input[id = "username"] ,.box input[id = "Register"],.box input[id = "shopname"] ,.box input[id = "services"] ,.box input[id="location"],
+.box input[id = "uaddress"] ,.box input[id = "uphone"] ,.box input[id = "umail"] ,.box input[id = "username"] 
+,.box input[id = "upassword"] ,.box input[id = "rupassword"], .box input[id = "email"]
+{
+    width:230px;
+}
+  .btn{
+      margin-bottom: 20px;
+  }
+  #location{
+      width: 230px;
+  }
+  .gender{
+      margin: 5px;
+  }
+ .signup {
+  font-family:MonotypeCoursive ;
+  margin-left:4%;
+  margin-bottom:40%;;
+  margin-top: 50px;
+  padding:0px;
+  width: 90%;
+  }
+  
+  .groom{
+      font-family: Edwardian Script ITC;
+          font-size: 35px;
+          padding-left: 1px;
+  }
+}
+@media screen and (min-width: 375px) {
+ .login {
+  font-family: MonotypeCoursive ;   
+  margin-left: 10%;
+   margin-bottom: 120%;
+  width: 80%;
+  padding:5px;
+  }
+
+   .btn{
+      margin-bottom: 20px;
+  }
+    .box input[id = "username"] ,.box input[id = "Register"],.box input[id = "shopname"] ,.box input[id = "services"] ,.box input[id="location"],
+.box input[id = "uaddress"] ,.box input[id = "uphone"] ,.box input[id = "umail"] ,.box input[id = "username"] 
+,.box input[id = "upassword"] ,.box input[id = "rupassword"], .box input[id = "email"]
+{
+    width:230px;
+}
+   .signup {
+ font-family:MonotypeCoursive ;
+  margin-left: 10%;
+    margin-bottom: 100px;
+   padding: 15px;
+  width: 80%;
+  margin-top: 40px;
+  }
+   #location{
+      width: 230px;
+  }
+  .groom{
+      font-family: Edwardian Script ITC;
+          font-size: 40px;
+          padding-left: 1px;
+  }
+}
+@media screen and (min-width: 425px) {
+ .login {
+  margin-left: 15%;
+   margin-bottom: 70%;
+  width: 70%;
+  padding:5px;
+  }
+   .btn{
+      margin-bottom: 30px;
+  }
+    .box input[id = "username"] ,.box input[id = "Register"],.box input[id = "shopname"] ,.box input[id = "services"] ,.box input[id="location"],
+.box input[id = "uaddress"] ,.box input[id = "uphone"] ,.box input[id = "umail"] ,.box input[id = "username"] 
+,.box input[id = "upassword"] ,.box input[id = "rupassword"], .box input[id = "email"]
+{
+    width:230px;
+}
+  .signup {
+   font-family: MonotypeCoursive;
+    margin-left: 13%;
+    margin-bottom: 100px;
+    padding: 10px;
+    width: 75%;
+    margin-top: 30px;
+  }
+   #location{
+      width: 230px;
+  }
+  .groom{
+      font-size: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+ .login {
+  margin-left: 30%;
+ margin-bottom: 70%;
+  width: 40%;
+  padding: 4px;
+  }
+   .signup {
+ margin-left: 25%;
+    width: 55%;
+    padding: 5px;
+    margin-bottom: 100px;
+    margin-top: 33px;
+  }
+   .btn{
+      margin-bottom: 30px;
+  }
+      .box input[id = "username"] ,.box input[id = "Register"],.box input[id = "shopname"] ,.box input[id = "services"] ,.box input[id="location"],
+.box input[id = "uaddress"] ,.box input[id = "uphone"] ,.box input[id = "umail"] ,.box input[id = "username"] 
+,.box input[id = "upassword"] ,.box input[id = "rupassword"], .box input[id = "email"]
+{
+    width:230px;
+}
+ #location{
+      width: 230px;
+  }
+  .groom{
+     font-size: 45px; 
+  }
+}
+@media screen and (min-width: 1024px) {
+ .signup {
+  margin-left: 35%;
+  width: 30%;
+  padding: 5px;
+   margin-bottom: 60px;
+   margin-top: 20px;
+  }
+   .btn{
+      margin-bottom: 30px;
+  }
+    .box input[id = "username"] ,.box input[id = "Register"],.box input[id = "shopname"] ,.box input[id = "services"] ,.box input[id="location"],
+.box input[id = "uaddress"] ,.box input[id = "uphone"] ,.box input[id = "umail"] ,.box input[id = "username"] 
+,.box input[id = "upassword"] ,.box input[id = "rupassword"], .box input[id = "email"]
+{
+    width:230px ;
+}
+  .login {
+ position: fixed;
+margin:5%;
+margin-left: 25%;
+  width: 30%;
+  padding: 4px;
+  }
+   #location{
+      width: 230px;
+  }
+  .groom{
+   font-size: 50px;     
+  }
+  
+}
+
+footer{
+
+    background-color:  #101010; 
+    color: #9d9d9d;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    
+}
+
+

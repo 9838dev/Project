@@ -1,0 +1,833 @@
+{%load static%}
+<html lang="en">
+<head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title> COVID-19</title>
+     <style>
+         .ticker-wrap {
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                height: 4rem;
+                background-color:#390d0d;
+                box-sizing: content-box;
+
+            }
+            .ticker-wrap .ticker {
+                display: inline-block;
+                height: 4rem;
+                line-height: 4rem;
+                white-space: nowrap;
+                padding-right: 100%;
+                box-sizing: content-box;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-name: ticker;
+                animation-name: ticker;
+                -webkit-animation-duration: 30s;
+                animation-duration: 30s;
+            }
+            .ticker-wrap .ticker__item {
+              display: inline-block;
+              padding: 0 2rem;
+              font-size: 2rem;
+              color: white;
+            }
+            @-webkit-keyframes ticker {
+              0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                visibility: visible;
+              }
+              100% {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+              }
+            }
+            @keyframes ticker {
+              0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                visibility: visible;
+              }
+              100% {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+              }
+            }
+
+                            /* Slideshow container */
+                 .slideshow-container {
+                   position: relative;
+                   margin: auto;
+                    margin-top: 90px;
+                 }
+                 .mySlides{
+
+                     border: 1px solid black;
+                     padding: 10px;
+                     color: white;
+                     width:100%;
+                     height: 184px;
+                     box-shadow: inset 14px -10px 20px 5px rgba(1, 4, 19, 0.5);
+                      background-image:url("{%static "css/img/covid.jpg" %}");
+                        background-size: cover;
+                        background-repeat: none;
+
+                 }
+                 .fade{
+                       box-shadow: outset 14px -10px 20px 5px rgba(1, 4, 19, 0.5);
+
+                 }
+
+                 .dot {
+                   height: 15px;
+                   width: 15px;
+                   margin: 22px 2px;
+                   background-color: #bbb;
+                   border-radius: 50%;
+                   display: inline-block;
+                   transition: background-color 0.6s ease;
+                 }
+
+                 .active {
+                   background-color: #717171;
+                 }
+
+                 /* Fading animation */
+                 .fade {
+                   -webkit-animation-name: fade;
+                   -webkit-animation-duration: 1.5s;
+                   animation-name: fade;
+                   animation-duration: 2s;
+                   margin-bottom: -13px;
+                 }
+
+                 @-webkit-keyframes fade {
+                   from {opacity: .4}
+                   to {opacity: 1}
+                 }
+
+                 @keyframes fade {
+                   from {opacity: .4}
+                   to {opacity: 1}
+                 }
+
+                 /* On smaller screens, decrease text size */
+                 @media only screen and (max-width: 300px) {
+                   .text {font-size: 11px}
+                 }
+
+                /*about us*/
+                .about-section {
+                    padding: 50px;
+                    text-align: center;
+                    background-color: #474e5d;
+                    color: white;
+                    margin-top: 20px;
+                    background: linear-gradient(360deg, #06114d, #740000);
+                  }
+                  /*Cards/profile*/
+                  .card {
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                        max-width: 300px;
+                        margin: auto;
+                        text-align: center;
+                        font-family: arial;
+                        margin-top: 20px;
+                      }
+
+                      .title {
+                        color: grey;
+                        font-size: 14px;
+                      }
+
+                      button {
+                        border: none;
+                        outline: 0;
+                        display: inline-block;
+                        padding: 8px;
+                        color: white;
+                        background: linear-gradient(144deg, black, #34042c);
+                        text-align: center;
+                        cursor: pointer;
+                        width: 100%;
+                        font-size: 18px;
+                      }
+
+                      a {
+                        text-decoration: none;
+                        font-size: 22px;
+                        color: black;
+                      }
+
+                      button:hover, a:hover {
+                        opacity: 0.7;
+                      }
+
+                      /*login/signup*/
+                      @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+                        .tab-style{
+                        font-size:20px;
+                        width:50%;
+                        background-color:#f2f2f2;
+                          text-align:center;
+
+
+                        }
+                        .nav-tabs > li > a {
+                            margin-right: 0px;
+                            color:grey;
+                        }
+
+
+
+                        .btn-block {
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            font-size: 18px;
+                            background: #053105;
+                        }
+                        .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+                                background: #cfffc9;
+                                color: #086718;
+                                font-weight: bolder;
+                            }
+
+                        .login-shadow{-webkit-box-shadow: 5px -5px 6px 0px rgba(82,82,82,0.52);
+                        -moz-box-shadow: 5px -5px 6px 0px rgba(82,82,82,0.52);
+                        box-shadow: 5px -5px 6px 0px rgba(82,82,82,0.52);
+                          z-index:1;
+
+                        }
+
+                        .signup-shadow{-webkit-box-shadow: -5px 0px 6px 0px rgba(82,82,82,0.52);
+                        -moz-box-shadow: -5px -5px 6px 0px rgba(82,82,82,0.52);
+                        box-shadow: -5px 0px 6px 0px rgba(82,82,82,0.52);
+
+                        }
+
+
+                        .modal-header{background-color:#e5ecf4;}
+
+                        .group {
+                                position: relative;
+                                margin-top: 30px;
+                        }
+                            fieldset {
+                            min-width: 0;
+                            padding: 0;
+                            margin: 0;
+                            border: 0;
+                            background:#cfffc9;
+                        }
+
+                        .input {
+                            font-size: 18px;
+                            padding: 5px 1px 5px 1px;
+                            -webkit-appearance: none;
+                            display: block;
+                            background: none;
+                            color: #086718;;
+                            width: 100%;
+                            border: none;
+                            border-radius: 0;
+                            border-bottom: 1px solid #015a03;
+                        }
+
+                        .input:focus { outline: none; }
+
+
+                        /* Label */
+
+                        .label {
+                                color: #086718;;
+                                font-size: 18px;
+                                font-weight: normal;
+                                position: absolute;
+                                pointer-events: none;
+                                left: -10px;
+                                top: 10px;
+                                transition: all 0.2s ease;
+                        }
+                        /* active */
+
+                        .input:focus ~ .label, .input.used ~ .label {
+                                top: -20px;
+                          transform: scale(.75); left:-15px;
+                                /* font-size: 14px; */
+                                color: #086718;;
+                        }
+
+
+                        /* Underline */
+
+                        .bar {
+                                position: relative;
+                                display: block;
+                                width: 100%;
+                        }
+
+                        .bar:before, .bar:after {
+                                content: '';
+                                height: 2px;
+                                width: 0;
+                                bottom: 1px;
+                                position: absolute;
+                                background: #4a89dc;
+                                transition: all 0.2s ease;
+                        }
+
+                        .bar:before { left: 50%; }
+
+                        .bar:after { right: 50%; }
+
+
+                        /* active */
+
+                        .input:focus ~ .bar:before, .input:focus ~ .bar:after { width: 50%; }
+
+
+                        /* Highlight */
+
+                        .highlight {
+                                position: absolute;
+                                height: 60%;
+                                width: 100px;
+                                top: 25%;
+                                left: 0;
+                                pointer-events: none;
+                                opacity: 0.5;
+                        }
+
+
+                        /* active */
+
+                        .input:focus ~ .highlight {
+                                animation: inputHighlighter 0.3s ease;
+                        }
+
+
+                        @media  screen and (max-width: 767px) and (min-width: 576px){
+                          #myModal{margin-left:20%;
+                                    margin-right:20%;}
+
+                          #forgot-password{margin-left:20%;
+                                    margin-right:20%;
+                                    font-size: 10px;
+                          }
+                        }
+
+
+                        @media screen and (min-width: 768px) {
+
+                                #myModal .modal-dialog  {width:500px;}
+
+                          #forgot-password .modal-dialog{width:500px;}
+
+                          .modal-body{padding-left:50px;
+                                      padding-right:50px;}
+                        }
+
+
+                        .modal-body{
+                          background:#cfffc9;
+                        }
+
+                        em{display:none;}
+
+                        #state {
+
+                            width: 100%;
+                            height: 45px;
+                            padding: 8px;
+                            padding-left: 0;
+                            padding-bottom: 0;
+                            border: none;
+                            border-bottom: 1px solid green;
+                            background: transparent;
+                            font-size: 2rem;
+                        }
+                        select{
+                            width:90px;
+                        }
+                        option{
+                            font-size: 15px;
+
+                        }
+                      footer{
+                          background: black;
+                          color:white;
+                          height: 30px;
+                          font-size:1.5rem;
+                      }
+                      #page-content {
+            flex: 1 0 auto;
+
+          }
+
+          #sticky-footer {
+            height: 40px;
+            line-height: 15px;
+            flex-shrink: none;
+            background: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+          }
+     </style>
+    </head>
+    <BODY>
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <a style="color:white;"  class="navbar-brand" href="#">COVID - 19</a>
+                </div>
+
+            </div>
+
+        </nav>
+
+      <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker__item">Clean your hands often. Use soap and water, or an alcohol-based hand rub.</div>
+            <div class="ticker__item">Maintain a safe distance from anyone who is coughing or sneezing.</div>
+            <div class="ticker__item">Don’t touch your eyes, nose or mouth.</div>
+             <div class="ticker__item">Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. </div>
+             <div class="ticker__item">Stay home if you feel unwell.</div>
+            <div class="ticker__item">If you have a fever, cough and difficulty breathing, seek medical attention. Call in advance.</div>
+             <div class="ticker__item">Follow the directions of your local health authority.</div>
+
+        </div>
+    </div>
+
+
+            <!-- Slideshow container -->
+        <div class="slideshow-container">
+                <div class="mySlides fade" >
+                    <center>
+                  <h1>World</h1>
+                  <h4 id="world_totalcase">Total Cases: </h4>
+                  <h4 id="world_totalrecover">Total Recovered </h4>
+                  <h4 id="world_totaldeath">Total Deaths: </h4>
+                    </center>
+                </div>
+
+                <div class="mySlides fade">
+                    <center>
+                        <h1>India</h1>
+                        <h4 id="india_totalcase">Total Cases: </h4>
+                        <h4 id="india_totalrecover">Total Recovered </h4>
+                        <h4 id="india_totaldeath">Total Deaths: </h4>
+                    </center>
+                </div>
+        </div>
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+
+        </div>
+            <!-- Button trigger modal -->
+            <center>{{msg}}</center>
+                    <div class="container">
+
+                        <br>
+                        <center>
+
+                            <button  class="btn btn-lg" href="#signup" data-toggle="modal" data-target=".log-sign" style="background: linear-gradient(354deg, #020102, #7026d1); color:white;">Sign In/Sign Up</button>
+                      </center>
+                      <br>
+
+
+                      </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+
+                            <div class="bs-example bs-example-tabs">
+                                <ul id="myTab" class="nav nav-tabs">
+                                  <h4 style="text-align:center;" hidden>Email is Not found</h4>
+                                  <h4 style="text-align:center;" hidden>Wrong Password</h4>
+                                  <h4 style="text-align:center;" hidden>Email already exist</h4>
+                                  <li id="tab1" class=" active tab-style login-shadow "><a href="#signin" data-toggle="tab">Log In</a></li>
+                                  <li id="tab2" class=" tab-style "><a href="#signup" data-toggle="tab">Sign Up</a></li>
+
+                                </ul>
+                            </div>
+                          <div class="modal-body">
+                            <div id="myTabContent" class="tab-content">
+
+                            <div class="tab-pane fade active in" id="signin">
+                                <form method="get" class="form-horizontal">
+                                {%csrf_token%}
+                                <fieldset>
+                                <!-- Sign In Form -->
+                                <!-- Text input-->
+
+                                   <div class="group">
+                    <input required="" name="email" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
+                        <label class="label" for="date">Email address</label></div>
+
+
+                                <!-- Password input-->
+                                <div class="group">
+                    <input required="" name="password" class="input" type="password"><span class="highlight"></span><span class="bar"></span>
+                        <label class="label" for="date">Password</label>
+                        </div>
+                    <em>minimum 6 characters</em>
+
+                               <div class="forgot-link">
+                                   <a href="#forgot" data-toggle="modal" data-target="#forgot-password" style="font-size:13px; float:right"> Forgot Password? </a>
+                                </div>
+
+
+                                <!-- Button -->
+                                <div class="control-group">
+                                  <label class="control-label" for="signin"></label>
+                                  <div class="controls">
+                                    <button id="signin" name="signin" class="btn btn-primary btn-block">Log In</button>
+                                  </div>
+                                </div>
+                                </fieldset>
+                                </form>
+                            </div>
+
+
+                            <div class="tab-pane fade" id="signup">
+                                <form method="post" class="form-horizontal">
+                                {%csrf_token%}
+                                <fieldset>
+                                <!-- Sign Up Form -->
+                                <!-- Text input-->
+                                <div class="group">
+                                        <input required="" name="name" class="input name" type="text"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label">Name</label>
+                                </div>
+
+                                <!--Email input-->
+                                <div class="group">
+                                        <input required="" name="email" class="input" type="email"><span class="highlight"></span><span class="bar"></span>
+                                            <label class="label">Email</label>
+                                </div>
+
+                        <!--contact input-->
+                                <div class="group">
+                                        <input required="" name="contact" class="input contact" type="number"><span class="highlight"></span><span class="bar"></span>
+                                            <label class="label">Contact No.</label>
+                                </div>
+
+                                <div class="group">
+                                               <select  id="state" name="state">
+                                                   <option value="state">--State--</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Delhi">Delhi</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Chandigarh">Chandigarh</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Ladakh">Ladakh</option>
+                                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                <option value="Puducherry">Meghalaya</option>
+
+                                                <option value="Goa">Goa</option>
+                                                 <option value="Manipur">Manipur</option>
+                                                  <option value="Mizoram">Mizoram</option>
+                                                   <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                    <option value="Daman and Diu">Daman and Diu</option>
+                                                     <option value="Nagaland">Nagaland</option>
+                                                      <option value="Dadra and Nagar">Dadra and Nagar</option>
+                                                       <option value="Lakshadweep">Lakshadweep</option>
+                                                        <option value="Sikkim">Sikkim</option>
+
+
+
+                                              </select>
+                                </div>
+
+                                  <div class="group">
+                                            <input required="" name="city" class="input city" type="text"><span class="highlight"></span><span class="bar"></span>
+                                                <label class="label">City</label>
+                                  </div>
+
+                                <!-- Password input-->
+                                <div class="group">
+                                    <input required="" name="password" class="input password" type="password"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label">Password</label>
+                                </div>
+                                 <!-- Password retype input-->
+                                <div class="group">
+                                    <input required="" name="rpassword" class="input password" type="password"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label">Re-Type Password</label>
+                                </div>
+                                <!-- Button -->
+                                <div class="control-group">
+                                  <label class="control-label" for="confirmsignup"></label>
+                                  <div class="controls">
+                                    <button id="confirmsignup" name="confirmsignup" class="btn btn-primary btn-block">Sign Up</button>
+                                  </div>
+                                </div>
+                                <h6>By signing up you agree our <a style="font-size:14px;" href="{%url 'terms'%}">Terms and Conditions</a></h6>
+                                </fieldset>
+                                </form>
+                          </div>
+                        </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <!--modal2-->
+
+                    <div class="modal fade bs-modal-sm" id="forgot-password" tabindex="0" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Password will be sent to your email</h4>
+                          </div>
+                          <div class="modal-body">
+                            <form class="form-horizontal">
+                            <fieldset>
+                            <div class="group">
+                    <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
+                        <label class="label" for="date">Email address</label></div>
+
+
+                            <div class="control-group">
+                                  <label class="control-label" for="forpassword"></label>
+                                  <div class="controls">
+                                    <button id="forpasswodr" name="forpassword" class="btn btn-primary btn-block">Send</button>
+                                  </div>
+                                </div>
+                              </fieldset>
+                                </form>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <script type="text/javascript">
+
+                      function imgchange(){
+                        $('#img1').fadeOut(3000,img2);
+                        function img1(){
+                          $('#img5').fadeOut(3000);
+                            $('#img1').fadeOut(3000,img2);
+                            document.getElementById('fet').innerHTML='Real time Covid-19 update';
+                        }
+                        function img2(){
+                            $('#img2').fadeIn(3000,img3);
+                              document.getElementById('fet').innerHTML='Real time Covid-19 update';
+                        }
+                        function img3(){
+                          $('#img2').fadeOut(3000);
+                            $('#img3').fadeIn(3000,img4);
+                              document.getElementById('fet').innerHTML='Real time news update';
+                        }
+                        function img4(){
+                          $('#img3').fadeOut(3000);
+                          $('#img4').fadeIn(3000,img5);
+                            document.getElementById('fet').innerHTML='Ask your question with C-19 community';
+                        }
+                        function img5(){
+                          $('#img4').fadeOut(3000);
+                          $('#img5').fadeIn(3000,img1);
+                            document.getElementById('fet').innerHTML='Help people/Do trade and lot more';
+                        }
+                      }
+                    </script>
+                    <div class="about-section">
+                      <h3 id="fet" >Real time state wise update</h3>
+                      <img id="img1"  src="{%static "css/img/1.PNG" %}" height="30%" width="100%" alt="">
+                      <img id="img2" src="{%static "css/img/2.PNG" %}" style="display:none"; width="100%" alt="">
+                      <img id="img3" src="{%static "css/img/3.PNG" %}" style="display:none"; width="100%" alt="">
+                      <img id="img4" src="{%static "css/img/4.PNG" %}" style="display:none";  width="100%" alt="">
+                      <img id="img5" src="{%static "css/img/5.PNG" %}" style="display:none"; width="100%" alt="">
+                    </div>
+
+            <div class="about-section">
+                <h1>About Us </h1>
+                <p> We tried to make a platform where all the Covid-19 information is available at one place</p>
+                <p> Our vision and mission is to help our citizens to stay safe and updated about this Covid-19 pandemic and about there surrounding.</p>
+                <p>Our main goal is to help citizens by listening there views and needs. And let them to communicate with each other.
+                    We also provide a base so that people will also be able to help other people by sending food,masks,medicines and other needs. </p>
+            </div>
+
+            <h2 style="text-align:center">Our Team "The ACES"</h2>
+
+            <div class="row text-center">
+                
+
+                    <div class="col-md-2 col-sm-6">
+                            <div class="card">
+                                <img src="{%static "css/img/dev.jpeg" %}" alt="Dev" height="200" width="200">
+                                <h4>Dev Maheshwari</h4>
+                                <p class="title">Web Developer</p>
+                                <p>Art director</p>
+                                <p><button>Contact</button></p>
+                              </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                            <div class="card">
+                                <img src="{%static "css/img/richa.jpeg" %}" alt="Richa" height="200" width="200">
+                                    <h4>Richa Raikwar</h4>
+                                    <p class="title">Web Designer</p>
+                                    <p>Designing Head</p>
+                                    <p><button>Contact</button></p>
+                            </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6">
+                      <div class="card">
+                          <img src="{%static "css/img/aman.jpeg" %}" alt="Aman" height="200"  width="200">
+                            <h4>Aman Kumar</h4>
+                            <p class="title">Web Content creator</p>
+                            <p>Content strategist</p>
+                            <p><button>Contact</button></p>
+                      </div>
+                    </div>
+
+
+
+<script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        $(window, document, undefined).ready(function () {
+  $(".input").blur(function () {
+    var $this = $(this);
+    if ($this.val()) $this.addClass("used");
+    else $this.removeClass("used");
+  });
+});
+
+$("#tab1").on("click", function () {
+  $("#tab1").addClass("login-shadow");
+  $("#tab2").removeClass("signup-shadow");
+});
+
+$("#tab2").on("click", function () {
+  $("#tab2").addClass("signup-shadow");
+  $("#tab1").removeClass("login-shadow");
+});
+
+$.ajax({
+  url: "https://api.covid19api.com/summary",
+  type: "GET",
+  datatype: "JSON",
+  success: function(update){
+    console.log(update)
+
+    $("#world_totalcase").append(update.Global.TotalConfirmed)
+    $("#world_totalrecover").append(update.Global.TotalRecovered)
+    $("#world_totaldeath").append(update.Global.TotalDeaths)
+
+    $("#india_totalcase").append(update.Countries[76].TotalConfirmed)
+    $("#india_totalrecover").append(update.Countries[76].TotalRecovered)
+    $("#india_totaldeath").append(update.Countries[76].TotalDeaths)
+  }
+});
+
+</script>
+<script type="text/javascript">
+
+  function imgchange(){
+    $('#img1').fadeOut(200);
+  }
+
+</script>
+<script type="text/javascript">
+
+  function imgchange(){
+    $('#img1').fadeOut(3000,img2);
+    function img1(){
+      $('#img5').fadeOut(3000);
+        $('#img1').fadeOut(3000,img2);
+        document.getElementById('fet').innerHTML='Real time Covid-19 update';
+    }
+    function img2(){
+        $('#img2').fadeIn(3000,img3);
+          document.getElementById('fet').innerHTML='Real time Covid-19 update';
+    }
+    function img3(){
+      $('#img2').fadeOut(3000);
+        $('#img3').fadeIn(3000,img4);
+          document.getElementById('fet').innerHTML='Real time news update';
+    }
+    function img4(){
+      $('#img3').fadeOut(3000);
+      $('#img4').fadeIn(3000,img5);
+        document.getElementById('fet').innerHTML='Ask your question with C-19 community';
+    }
+    function img5(){
+      $('#img4').fadeOut(3000);
+      $('#img5').fadeIn(3000,img1);
+        document.getElementById('fet').innerHTML='Help people/Do trade and lot more';
+    }
+  }
+  imgchange();
+</script>
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+<div class="container text-center">
+<small>An Initiative By The Ace's<br>Central Helpline Number for corona-virus: - +91-11-23978046</small><br>
+
+</div>
+</footer>
+
+</body>
+</html>

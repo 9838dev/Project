@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{%load static%}
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>User login</title>
+        <link href="{% static "css/user_reg.css" %}" type="text/css" rel="stylesheet">
+    </head>
+    <body class="bg">
+
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+
+                <div class="navbar-header">
+                     <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src= "{% static "css/img/logo.png" %}" width="250" height="55">
+
+                </div>
+               <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href=""><span class="glyphicon glyphicon-home"></span> Home </a></li>
+                        <li><a href="user_reg"><span class="glyphicon glyphicon-log-in"></span> SignUp</a></li>
+                         <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> About us</a></li>
+                          <li ><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Services</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+             <a href="user-login.html"></a>
+         </nav><br><br>
+         <br>
+         <br>
+         <br>
+         {{key}}
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-4 myclass login">
+                   <center> <h2><b>Login</b></h2></center>
+                        <form class="box text-center" method = "post">
+                          {% csrf_token %}
+                              <div class="form-group">
+                                {{msg1}} {{msg3}}
+                                <input type="email" class="form-control" id="umail" placeholder="Email/Contact"  name="Email" required= "true">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="upassword" placeholder="Password" name="Password" required = "true">
+                            </div>
+                            <button type="submit" name="submit" class="btn btn-primary ">Submit</button>
+                             <p>Don't have an account? <a href="user_reg">Register</a></p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+<footer>
+            <div class="container">
+                <p align="center"><br>
+                   Shop owner?? click here<a class="shop" href="{%url "shop_ui"%}"> @Grooming.com </a><br>
+                    Copyright @ Grooming.com. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+             </body>
+
+</html>
